@@ -18,24 +18,31 @@ BASH_SRC=$(dirname "${BASH_SOURCE[0]}")
 
 shopt -s dotglob
 
-for file in ${BASH_SRC}/.[^.]*; do
-  fname=${file##*/};
-  fullpath=$(realpath ${file});
+for file in ${BASH_SRC}/.*; do
+  echo "${file}" | rg -q "\.swp|\.gitignore|\.+$|\.git";
+  if [[ $? != 0 ]]; then
+    fname=${file##*/};
+    fullpath=$(realpath ${file});
 
-  echo -en "${RST} Make symlink ${CYN}~/${fname} -> ${WHT}${file} ${YLW}(y/n/q)${RST}? "
-  read -N 1 resp
+    if [[ -f ${file} ]]; then
+      echo -en "${RST} Make symlink ${CYN}~/${fname} -> ${WHT}${file} ${YLW}(y/n/q)${RST}? "
+    else
+      echo -en "${RST} Make symlink ${CYN}~/${fname} -> ${BLU}${file}/ ${YLW}(y/n/q)${RST}? "
+    fi
 
-  if [[ ${resp} == "y" ]]; then
+    read -N 1 resp
 
-    ln -s ${fullpath} ~/${fname};
-    echo -e " ${GRN} Done!${RST}";
-  elif [[ ${resp} == "q" ]]; then
-    echo -e " ${PUR}Quit!${RST}";
-    exit 0;
-  else
-    echo -e " ${RED} Skipped${RST}";
+    if [[ ${resp} == "y" ]]; then
+
+      ln -s ${fullpath} ~/${fname};
+      echo -e " ${GRN} Done!${RST}";
+    elif [[ ${resp} == "q" ]]; then
+      echo -e " ${PUR}Quit!${RST}";
+      exit 0;
+    else
+      echo -e " ${RED} Skipped${RST}";
+    fi
   fi
-
 done
 
 shopt -u dotglob
