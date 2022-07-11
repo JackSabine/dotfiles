@@ -1,0 +1,16 @@
+$include /etc/inputrc
+
+set completion-ignore-case On
+set colored-stats On
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set visible-stats On
+
+
+set bell-style none
+
+set input-meta On
+set output-meta On
+set convert-meta Off
+set completion-query-items 100
+TAB: menu-complete
