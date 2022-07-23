@@ -15,42 +15,24 @@ alias ~="cd ~"
 
 alias fexp="nautilus --browser $# &"
 
-BLK='\[\033[01;30m\]'
-RED='\[\033[01;31m\]'
-GRN='\[\033[01;32m\]'
-YLW='\[\033[01;33m\]'
-BLU='\[\033[01;34m\]'
-PUR='\[\033[01;35m\]'
-CYN='\[\033[01;36m\]'
-WHT='\[\033[01;37m\]'
-RST='\[\033[00m\]'
-
-parse_git_branch() {
-  local_BLK='\033[01;30m'
-  local_RED='\033[01;31m'
-  local_GRN='\033[01;32m'
-  local_YLW='\033[01;33m'
-  local_BLU='\033[01;34m'
-  local_PUR='\033[01;35m'
-  local_CYN='\033[01;36m'
-  local_WHT='\033[01;37m'
-  local_RST='\033[00m'
-  b=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-  if [[ ${b} != "" ]]; then
-    echo -e "${local_WHT}[${local_YLW}\ue725 ${local_GRN}${b}${local_WHT}] "
-  fi
-}
-
 set_bash_prompt() {
+  BLK='\[\033[01;30m\]'
+  RED='\[\033[01;31m\]'
+  GRN='\[\033[01;32m\]'
+  YLW='\[\033[01;33m\]'
+  BLU='\[\033[01;34m\]'
+  PUR='\[\033[01;35m\]'
+  CYN='\[\033[01;36m\]'
+  WHT='\[\033[01;37m\]'
+  RST='\[\033[00m\]'
+
   # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
   # If ${debian_chroot} is defined (not null), then use it.  Else, use "".
 
-  PS1="${debian_chroot:+($debian_chroot)}${YLW}\u${WHT}@${BLU}\h${WHT}: ${CYN}\w/ \$(parse_git_branch)${RED}\$${RST} "
+  PS1="${debian_chroot:+($debian_chroot)}${YLW}\u${WHT}@${BLU}\h${WHT}: ${CYN}\w/ \$(__git_ps1 \"${WHT}[${YLW}\Ue725 ${GRN}%s${WHT}] \")${RED}\$${RST} "
 }
 
 PROMPT_COMMAND=set_bash_prompt
-
-#unset BLK RED GRN YLW BLU PUR CYN WHT RST
 
 pushd() {
   if [ $# -eq 0 ]; then
