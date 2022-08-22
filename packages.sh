@@ -26,6 +26,12 @@ sudo apt install libncurses5-dev
 sudo apt install libncursesw5-dev
 sudo apt install ncurses-compat-libs
 sudo apt install libtinfo-dev
+
+## 7zip
+sudo add-apt-repository universe
+sudo apt update
+sudo apt install p7zip-full p7zip-rar
+
 # Snap installs
 sudo snap install discord
 sudo snap install spotify
