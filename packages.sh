@@ -20,6 +20,8 @@ sudo apt install bat              # `cat` replacement -- binary named `batcat` o
 sudo apt install exa              # `ls` replacement
 sudo apt install ripgrep          # `grep` replacement
 sudo apt install okular           # PDF Viewer
+sudo apt install htop             # Task Manager / Viewer
+sudo apt install ffmpegthumbnailer
 
 # Standalone apps
 sudo apt install steam
@@ -36,6 +38,9 @@ sudo apt install libtinfo-dev
 sudo add-apt-repository universe
 sudo apt update
 sudo apt install p7zip-full p7zip-rar
+
+## Media players
+sudo apt install vlc
 
 # Snap installs
 sudo snap install discord
