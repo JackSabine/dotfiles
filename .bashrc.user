@@ -1,5 +1,9 @@
 alias n="nvim"
 
+alias docs="cd ~/Documents"
+alias pics="cd ~/Pictures"
+alias down="cd ~/Downloads"
+
 alias tm="tmux"
 alias tmns="tmux new -s"
 alias tmls="tmux ls"
