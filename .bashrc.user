@@ -58,6 +58,6 @@ alias -- -='popd'
 alias ls='exa -lFb --icons --color always'
 alias la='ls -a'
 
-alias cat='batcat'
+alias bat='batcat'
 
 alias gs='git st'
