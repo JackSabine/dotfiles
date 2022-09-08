@@ -1,6 +1,7 @@
 \.git
 README.md
-packages
+apt_packages
+snap_packages
 packages\.sh
 mksimlinks\.sh
 
