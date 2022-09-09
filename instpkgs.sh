@@ -12,11 +12,13 @@ fi
 sudo add-apt-repository universe
 
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 
 xargs -a ./apt_packages sudo apt install -y
 
 sudo snap install $(cat ./snap_packages)
+
+echo "Done!"
 
 # gsettings set org.gnome.shell.extensions.dash-to-dock isolate-monitors true
 
