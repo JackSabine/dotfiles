@@ -6,7 +6,7 @@ IFS=$'\n\t'
 
 mint_nosnap_file=/etc/apt/preferences.d/nosnap.pref
 if [[ -f ${mint_nosnap_file} ]]; then
-    sudo awk -i inplace '{print "# " $0}' ${mint_nosnap_file}
+  sudo awk -i inplace '{print "# " $0}' ${mint_nosnap_file}
 fi
 
 sudo add-apt-repository universe
