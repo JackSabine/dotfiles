@@ -16,7 +16,12 @@ sudo apt upgrade -y
 
 xargs -a ./apt_packages sudo apt install -y
 
-sudo snap install $(cat ./snap_packages)
+# Install individually to incur no errors :(
+# https://askubuntu.com/questions/1232034/problem-when-trying-to-install-multiple-apps-with-snap
+# https://forum.snapcraft.io/t/trying-to-re-install-multiple-packages-with-snap-install-fails-with-install-refresh-information-results-from-the-store/24859
+for i in $(cat ./snap_packages); do
+  sudo snap install ${i}
+done
 
 echo "Done!"
 
