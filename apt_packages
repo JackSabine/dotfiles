@@ -1,6 +1,8 @@
 snapd
 gnome-tweaks
 gnome-screenshot
+gcc
+g++
 piper
 ckb-next
 git
