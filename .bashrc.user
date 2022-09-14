@@ -3,6 +3,7 @@ alias n="nvim"
 alias docs="cd ~/Documents"
 alias pics="cd ~/Pictures"
 alias down="cd ~/Downloads"
+alias od="cd ~/OneDrive"
 
 alias tm="tmux"
 alias tmns="tmux new -s"
