@@ -24,4 +24,7 @@ p7zip-full
 p7zip-rar
 onedrive
 bmon
-
+openmpi-bin
+openmpi-common
+openmpi-doc
+libopenmpi-dev
