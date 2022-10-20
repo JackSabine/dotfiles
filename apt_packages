@@ -28,3 +28,4 @@ openmpi-bin
 openmpi-common
 openmpi-doc
 libopenmpi-dev
+trash-cli

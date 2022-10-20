@@ -78,3 +78,5 @@ alias tree='ls --tree'
 alias bat='batcat'
 
 alias gs='git st'
+
+alias t='trash'
