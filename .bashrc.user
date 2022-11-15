@@ -37,6 +37,23 @@ alias ~="cd ~"
 
 alias fexp="nautilus --browser $# &"
 
+decorate_cur_conda_env() {
+  BLK='\033[01;30m'
+  RED='\033[01;31m'
+  GRN='\033[01;32m'
+  YLW='\033[01;33m'
+  BLU='\033[01;34m'
+  PUR='\033[01;35m'
+  CYN='\033[01;36m'
+  GRY='\033[00;37m'
+  WHT='\033[01;37m'
+  RST='\033[00m'
+
+  if [[ -n ${CONDA_DEFAULT_ENV} ]]; then
+    echo -e "${WHT}(${GRN}${CONDA_DEFAULT_ENV}${WHT}) "
+  fi
+}
+
 set_bash_prompt() {
   BLK='\[\033[01;30m\]'
   RED='\[\033[01;31m\]'
@@ -51,7 +68,7 @@ set_bash_prompt() {
   # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
   # If ${debian_chroot} is defined (not null), then use it.  Else, use "".
 
-  PS1="${debian_chroot:+($debian_chroot)}${YLW}\u${WHT}@${BLU}\h${WHT}: ${CYN}\w/ \$(__git_ps1 \"${WHT}[${YLW}\Ue725 ${GRN}%s${WHT}] \")${RED}\$${RST} "
+  PS1="${debian_chroot:+($debian_chroot)}${YLW}\u${WHT}@${BLU}\h${WHT}: ${CYN}\w/ \$(__git_ps1 \"${WHT}[${YLW}\Ue725 ${GRN}%s${WHT}] \")\$(decorate_cur_conda_env)${RED}\$${RST} "
 }
 
 PROMPT_COMMAND=set_bash_prompt
