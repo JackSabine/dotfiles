@@ -2,6 +2,6 @@
 README.md
 apt_packages
 snap_packages
-packages\.sh
-mksimlinks\.sh
+instpkgs\.sh
+mksymlinks\.sh
 
