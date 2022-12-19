@@ -8,7 +8,6 @@ ckb-next
 git
 curl
 tmux
-neovim
 kicad
 tree
 bat
@@ -36,3 +35,10 @@ npm
 gdb
 neofetch
 timeshift
+flatpak
+xclip
+libncurses5
+libtinfo5
+libncurses5-dev
+libncursesw5-dev
+libtinfo-dev
