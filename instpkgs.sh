@@ -6,13 +6,17 @@ IFS=$'\n\t'
 
 mint_nosnap_file="/etc/apt/preferences.d/nosnap.pref"
 snap_pkglist_file="snap_packages"
+apt_repositories_file="apt_repositories"
 apt_pkglist_file="apt_packages"
 
 if [[ -f ${mint_nosnap_file} ]]; then
   sudo sed -e 's/^#*/#/' -i ${mint_nosnap_file}
 fi
 
-sudo add-apt-repository universe
+IFS=$'\n' readarray -t apt_repos < ${apt_repositories_file}
+for repo in ${apt_repos[@]}; do
+  sudo add-apt-repository ${repo} --yes --no-update
+done
 
 sudo apt update
 sudo apt upgrade -y
