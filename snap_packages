@@ -7,3 +7,4 @@ notepad-plus-plus
 onlyoffice-desktopeditors
 gimp
 powershell --classic
+nvim --channel=stable --classic

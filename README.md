@@ -24,7 +24,16 @@ sudo n stable
 ### Neovim
 
 The apt version may not be the latest version.
+At the time of writing this, snap channels `stable` and `edge` correspond to `stable` and `nightly`.
 
-1. [Get the latest stable version](https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb)
-2. [Verify the sha256sum](https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb.sha256sum)
-3. Install from the deb package
+If you want to install from the project GitHub (snap is behind, etc.):
+
+```bash
+curl -OL https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb # Downloads latest stable version into CWD
+curl -OL https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb.sha256sum # Downloads corresponding SHA256
+sha256sum -c nvim-linux64.deb.sha256sum # Verify download integrity
+sudo apt update
+sudo apt remove neovim # Remove old version of neovim (if exists)
+sudo apt autoremove # Remove any old dependencies from neovim
+sudo apt install ./nvim-linux64.deb # Install from .deb file
+```
