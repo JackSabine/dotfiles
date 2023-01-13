@@ -1,6 +1,7 @@
 \.git
 README.md
 apt_packages
+apt_repositories
 snap_packages
 instpkgs\.sh
 mksymlinks\.sh
