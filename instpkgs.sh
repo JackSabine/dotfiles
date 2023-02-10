@@ -45,4 +45,3 @@ echo "Done!"
 
 # bash -c  "$(wget -qO- https://git.io/vQgMr)"
 # git clone git@github.com:Znuff/consolas-powerline.git ~/Downloads
-
