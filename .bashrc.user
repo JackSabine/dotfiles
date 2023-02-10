@@ -61,14 +61,15 @@ function __my_conda_ps1() {
 }
 
 function set_my_prompt() {
-  local __debian_chroot="${debian_chroot:+($debian_chroot)}"
+  # local __debian_chroot="${debian_chroot:+($debian_chroot)}"
   local __user_and_host="${YLW}\u${WHT}@${BLU}\h${WHT}:"
   local __cur_location="${CYN}\w/"
   local __git_branch="\$(__git_ps1 \"${WHT}[${YLW}\Ue725 ${GRN}%s${WHT}] \")"
   local __conda_env="\$(__my_conda_ps1 \"${WHT}(${GRN}%s${WHT}) \")"
   local __ending="${RED}\$${RST} "
 
-  export PS1="${__debian_chroot}${__user_and_host} ${__cur_location} ${__git_branch}${__conda_env}${__ending}"
+  # export PS1="${__debian_chroot}${__user_and_host} ${__cur_location} ${__git_branch}${__conda_env}${__ending}"
+  export PS1="${__user_and_host} ${__cur_location} ${__git_branch}${__conda_env}${__ending}"
 }
 
 set_my_prompt
