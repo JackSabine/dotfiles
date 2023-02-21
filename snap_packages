@@ -3,7 +3,6 @@ spotify
 slack
 zoom-client --channel=candidate --devmode
 code --classic
-notepad-plus-plus
 onlyoffice-desktopeditors
 gimp
 powershell --classic
