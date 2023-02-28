@@ -131,7 +131,7 @@ if [[ -f ${__vivado_install_dir}/settings64.sh ]]; then
 fi
 unset __vivado_version __vivado_install_dir
 
-declare -a path_candidates=("$HOME/.cargo/bin" "/opt/riscv/bin")
+declare -a path_candidates=("$HOME/.cargo/bin")
 for p in "${path_candidates[@]}"; do
   if [[ -d "${p}" ]]; then
     export PATH="$PATH:${p}"
