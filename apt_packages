@@ -56,7 +56,6 @@ default-jre
 default-jdk
 julia
 bear
-clangd
 obs-studio
 vim
 autoconf
