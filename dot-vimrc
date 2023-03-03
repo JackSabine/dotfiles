@@ -63,9 +63,7 @@ set path+=**
 
 " Let syntax scripts format/highlight code
 syntax on
-filetype on
-filetype plugin
-filetype indent
+filetype plugin indent on
 set autoindent
 set smartindent
 
