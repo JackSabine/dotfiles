@@ -37,3 +37,12 @@ sudo apt remove neovim # Remove old version of neovim (if exists)
 sudo apt autoremove # Remove any old dependencies from neovim
 sudo apt install ./nvim-linux64.deb # Install from .deb file
 ```
+
+## Notes
+
+./dot-vimrc does not set a colorscheme at first. Once a preferred scheme is installed (like vim-code-dark), that line may be uncommented.
+
+-   For git to ignore this change, run `git update-index --skip-worktree dot-vimrc`
+-   To re-enable tracking, run `git update-index --no-skip-worktree dot-vimrc`
+
+Thanks to this [SO post](https://stackoverflow.com/a/13631525/14566894)
