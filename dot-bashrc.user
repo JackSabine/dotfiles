@@ -102,4 +102,9 @@ alias gs='git st'
 
 alias t='trash'
 
-alias update='sudo apt update; sudo apt upgrade -y; sudo snap refresh; flatpak update -y'
+function update() {
+  sudo apt update
+  sudo apt upgrade -y
+  sudo snap refresh
+  flatpak update -y
+}
