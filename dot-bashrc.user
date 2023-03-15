@@ -105,6 +105,8 @@ alias t='trash'
 function update() {
   sudo apt update
   sudo apt upgrade -y
+  sudo apt autoremove -y
   sudo snap refresh
   flatpak update -y
+  flatpak uninstall --unused
 }
