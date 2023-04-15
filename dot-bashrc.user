@@ -108,5 +108,5 @@ function update() {
   sudo apt autoremove -y
   sudo snap refresh
   flatpak update -y
-  flatpak uninstall --unused
+  flatpak uninstall -y --unused
 }
