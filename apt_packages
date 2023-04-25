@@ -83,3 +83,4 @@ libglib2.0-dev
 libpixman-1-dev
 rename
 lm-sensors
+cmake
