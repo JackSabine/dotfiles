@@ -8,7 +8,6 @@ ckb-next
 git
 curl
 tmux
-kicad
 tree
 bat
 exa
