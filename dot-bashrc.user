@@ -102,6 +102,9 @@ alias gs='git st'
 
 alias t='trash'
 
+alias vact='source .venv/bin/activate'
+alias dact='deactivate'
+
 function update() {
   sudo apt update
   sudo apt upgrade -y
