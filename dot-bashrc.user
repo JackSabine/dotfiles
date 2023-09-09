@@ -129,3 +129,7 @@ function update() {
   flatpak update -y
   flatpak uninstall -y --unused
 }
+
+alias sxinu='VBoxManage startvm "backend" -type headless'
+alias kxinu='VBoxManage controlvm "backend" poweroff'
+alias rxinu='VBoxManage controlvm "backend" reset'
