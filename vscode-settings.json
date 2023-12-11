@@ -1,0 +1,54 @@
+{
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "git.ignoreLegacyWarning": true,
+    "git.autofetch": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.colorTheme": "Default Dark+",
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "files.associations": {
+        "*.o": "asm-intel-x86-generic"
+    },
+    "explorer.autoReveal": false,
+    "editor.minimap.enabled": false,
+    "git-autoconfig.configList": [
+        {
+            "user.email": "jack@sabine.ws",
+            "user.name": "jsabine"
+        }
+    ],
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "normal",
+    "terminal.integrated.lineHeight": 1.0,
+    "workbench.colorCustomizations": {
+        "terminal.foreground": "#E8EAED",
+        "terminal.background": "#202124",
+        "terminal.ansiBlack": "#202124",
+        "terminal.ansiRed": "#EA4335",
+        "terminal.ansiGreen": "#34A853",
+        "terminal.ansiYellow": "#FBBC04",
+        "terminal.ansiBlue": "#4285F4",
+        "terminal.ansiMagenta": "#A142F4",
+        "terminal.ansiCyan": "#24C1E0",
+        "terminal.ansiWhite": "#E8EAED",
+        "terminal.ansiBrightBlack": "#5F6368",
+        "terminal.ansiBrightRed": "#EA4335",
+        "terminal.ansiBrightGreen": "#34A853",
+        "terminal.ansiBrightYellow": "#FBBC04",
+        "terminal.ansiBrightBlue": "#4285F4",
+        "terminal.ansiBrightMagenta": "#A142F4",
+        "terminal.ansiBrightCyan": "#24C1E0",
+        "terminal.ansiBrightWhite": "#FFFFFF"
+    }
+}
