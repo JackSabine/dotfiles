@@ -1,7 +1,7 @@
 discord
 spotify
 slack
-zoom-client --channel=candidate --devmode
+zoom-client --channel=edge --devmode
 code --classic
 onlyoffice-desktopeditors
 gimp
