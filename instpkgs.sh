@@ -41,7 +41,5 @@ set -e
 
 echo "Done!"
 
-# gsettings set org.gnome.shell.extensions.dash-to-dock isolate-monitors true
-
 # bash -c  "$(wget -qO- https://git.io/vQgMr)"
 # git clone git@github.com:Znuff/consolas-powerline.git ~/Downloads
