@@ -1,9 +1,1 @@
-discord
-spotify
-slack
-zoom-client --channel=edge --devmode
-code --classic
-onlyoffice-desktopeditors
-gimp
-powershell --classic
 nvim --channel=stable --classic
