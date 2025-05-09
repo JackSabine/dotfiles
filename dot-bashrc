@@ -124,7 +124,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-VIVADO_VERSION="2024.1"
+VIVADO_VERSION="2024.2"
 __vivado_install_dir="/opt/Xilinx/Vivado/${VIVADO_VERSION}"
 if [[ -f ${__vivado_install_dir}/settings64.sh ]]; then
   source ${__vivado_install_dir}/settings64.sh;

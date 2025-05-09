@@ -2,7 +2,7 @@ gcc
 g++
 tree
 bat
-exa
+eza
 ripgrep
 htop
 stow
@@ -25,7 +25,6 @@ php
 golang-go
 default-jre
 default-jdk
-julia
 bear
 cmake
 python-is-python3

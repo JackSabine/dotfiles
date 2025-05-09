@@ -108,7 +108,7 @@ function popd() {
 alias cd='pushd'
 alias -- -='popd'
 
-alias ls='exa -lFb --icons --color always'
+alias ls='exa -lb --icons --color always --classify always'
 alias la='ls -a'
 alias tree='ls --tree'
 
@@ -133,3 +133,5 @@ function update() {
 alias sxinu='VBoxManage startvm "backend" -type headless'
 alias kxinu='VBoxManage controlvm "backend" poweroff'
 alias rxinu='VBoxManage controlvm "backend" reset'
+
+alias cdwa='cd $WORKAREA'
