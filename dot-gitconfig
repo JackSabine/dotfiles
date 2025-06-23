@@ -5,6 +5,8 @@
   lg = "!git log --graph --pretty=format:'%C(yellow)%h%C(reset) -%C(auto)%d%C(reset) %s %C(green)(%cr) %C(bold blue)<%an>%C(reset)' -20"
   st = "!git status -sb"
   rt = "!git rev-parse --show-toplevel"
+  cl = "!git clone --recurse-submodules"
+  su = "!git submodule update --init --recursive"
 [core]
   editor = nvim
 [init]
