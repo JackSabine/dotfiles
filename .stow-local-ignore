@@ -6,4 +6,5 @@ snap_packages
 instpkgs\.sh
 mksymlinks\.sh
 vscode-settings\.json
+init\.sh
 
